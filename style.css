@@ -36,6 +36,11 @@ p{
     font-size:100%;
     vertical-align:baseline;
     background-image:url("monet.jpg");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
     
     
 }
