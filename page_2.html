@@ -40,6 +40,30 @@
             <p class="credits">Texte: Noah Boisjoli-Jebali<br>Un site de <a class="credits" href="mailto:jacinthe.bouchard@hotmail.ca">Jacinthe Bouchard</a> et <a class="credits" href="mailto:andreanneboisjoli@gmail.com">Andréanne Boisjoli</a> <br>Musique : Patrick Tremblay<br>Vidéo par <a href="https://www.pexels.com/video/nature-tree-river-wind-4980222/" class="credits" target="_blank">Super Lunar</a> sur Pexels</p>
          </div>
       </footer>
-      </div>
+       
+       <script>
+       //Arrêter l'audio avec la barre d'espace
+           
+       var audio = document.querySelector('audio');
+
+if (audio) {
+
+  window.addEventListener('keydown', function (event) {
+
+    var key = event.which || event.keyCode;
+
+    if (key === 32) { // spacebar
+
+      // eat the spacebar, so it does not scroll the page
+      event.preventDefault();
+
+      audio.paused ? audio.play() : audio.pause();
+      
+    }
+
+  });
+}
+       </script>
+      
    </body>
 </html>
